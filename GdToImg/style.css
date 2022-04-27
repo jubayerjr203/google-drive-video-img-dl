@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+}
+body {
+  background: #4f4f4f;
+  color: aliceblue;
+}
+.contenar {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+.dd__cc {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+input {
+  color: aliceblue;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #4f4f4f;
+  box-shadow: inset 18px 18px 33px #3f3f3f, inset -18px -18px 33px #5f5f5f;
+  padding: 0.8rem 1rem;
+  width: 280px;
+}
+button {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+  color: aliceblue;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #555555, #474747);
+  box-shadow: 5px 5px 10px #414141, -5px -5px 10px #5d5d5d;
+}
+form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+button.output {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+button:hover {
+  background: #4f4f4f;
+  box-shadow: inset 5px 5px 10px #414141, inset -5px -5px 10px #5d5d5d;
+}
+
+@media (max-width: 440px) {
+  /* input {
+    width: 100%;
+  } */
+  form {
+    flex-direction: column;
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background: linear-gradient(145deg, #555555, #474747);
+  box-shadow: 5px 5px 22px #2c2c2c, -5px -5px 22px #727272;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  text-transform: capitalize;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+h1.heading_TEXT {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.heading {
+  max-width: 100%;
+  width: 65%;
+  margin-bottom: 2rem;
+}
+
+img.icon.one {
+  position: absolute;
+  left: 35%;
+  top: 20%;
+  width: 50px;
+  animation: one 8s linear infinite;
+}
+
+img.icon.tow {
+  position: absolute;
+  bottom: 8%;
+  right: 11%;
+  width: 50px;
+  animation: tow 4s linear infinite;
+}
+
+img.icon.three {
+  position: absolute;
+  top: -32px;
+  left: 63%;
+  animation: three 4s ease-in-out infinite;
+}
+
+img.icon.four {
+  position: absolute;
+  bottom: 10%;
+  left: 9%;
+  width: 50px;
+  animation: four 5s linear infinite;
+}
+
+@keyframes one {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes three {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(25px);
+  }
+}
+@keyframes four {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25px);
+  }
+}
